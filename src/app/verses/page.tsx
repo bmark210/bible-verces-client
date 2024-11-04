@@ -1,15 +1,15 @@
-import { Verse } from "@prisma/client";
-import { getVerses } from "../core/services";
-import Cart from "../core/components/cart/cart";
+// import { Verse } from "@prisma/client";
+// import { getVerses } from "../core/services";
+// import Cart from "../core/components/cart/cart";
 
 async function Verses() {
-  const verses: Verse[] = await getVerses();
+//   const verses: Verse[] = await getVerses();
   return (
     <>
       <div className="night-sky">
         <div className="shooting-stars"></div>
 
-        <div className="main-container">
+        {/* <div className="main-container">
           {verses.map((item, indexA) => (
             <div className="block z-10" key={indexA}>
               <div className="block z-10">
@@ -24,7 +24,7 @@ async function Verses() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );
