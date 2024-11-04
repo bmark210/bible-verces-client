@@ -1,25 +1,14 @@
-import { prisma } from "../../client";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { PrismaClient } from '@prisma/client';
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === "GET") {
+const prisma = new PrismaClient();
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
     const verses = await prisma.verse.findMany();
-    return res.status(200).json(verses);
+    res.status(200).json(verses);
+  } catch (error) {
+    console.error("API Error:", error);
+    res.status(500).json({ message: "Internal server error" });
   }
-
-  if (req.method === "POST") {
-    try {
-      const user = await prisma.verse.create({
-        data: req.body,
-      });
-      return res.status(201).json(user);
-    } catch (error) {
-      console.error("Error creating verse:", error);
-      return res.status(500).json({ error: "Failed to create verse" });
-    }
-  }
-
-  return res.status(405).end();
-};
-
-export default handler;
+}
