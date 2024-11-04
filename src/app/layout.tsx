@@ -18,11 +18,13 @@ export const metadata: Metadata = {
   description: "Simple app for verses",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
