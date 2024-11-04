@@ -2,7 +2,7 @@ import axios from "axios";
 import { VerseBody } from "../interfaces";
 import { Verse } from "@prisma/client";
 
-const baseUrl = process.env.NODE_ENV === 'production' ? process.env.PRODUCTION_API_URL : 'http://localhost:3000';
+const baseUrl = process.env.NODE_ENV === 'production' ? window.location.origin : 'http://localhost:3000';
 
 
 export async function getVerses(): Promise<Verse[]> {
