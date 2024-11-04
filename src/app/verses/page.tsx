@@ -4,6 +4,8 @@ import Cart from "../core/components/cart/cart";
 
 async function Verses() {
   const verses: Verse[] = await getVerses();
+  console.log(verses, "verses");
+  
   return (
     <>
       <div className="night-sky">
