@@ -8,18 +8,18 @@ import { FileText, LinkIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="block p-3 bg-transparent border-2 border-solid border-white rounded-lg backdrop-filter backdrop-blur-md">
+    <div className="block p-3 bg-transparent rounded-lg">
       <SidebarProvider className="w-full justify-between">
         <div className="w-full flex gap-3">
           <Link href="/verses">
-            <Button className="flex items-center gap-2 bg-transparent border border-solid border-white rounded-lg hover:bg-white hover:text-black">
+            <Button className="flex items-center gap-2 bg-transparent  backdrop-filter backdrop-blur-md border border-solid border-white rounded-lg hover:bg-white hover:text-black">
               <FileText />
               <p>Verses</p>
             </Button>
           </Link>
 
           <Link href="/contexts">
-            <Button className="flex items-center gap-2 bg-transparent border border-solid border-white rounded-lg hover:bg-white hover:text-black">
+            <Button className="flex items-center gap-2 bg-transparent  backdrop-filter backdrop-blur-md border border-solid border-white rounded-lg hover:bg-white hover:text-black">
               <LinkIcon />
               <p>Contexts</p>
             </Button>
