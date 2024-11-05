@@ -8,7 +8,7 @@ import {
   // Copy,
   // CornerUpLeft,
   // CornerUpRight,
-  FileText,
+  // FileText,
   // GalleryVerticalEnd,
   // LineChart,
   Link as LinkIcon,
