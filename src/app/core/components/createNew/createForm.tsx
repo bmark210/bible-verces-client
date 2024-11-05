@@ -23,7 +23,7 @@ const CreateVerseForm = () => {
 
   useEffect(() => {
     console.log(window?.location.href, "location.href");
-    console.log(window?.location, "location");
+    console.log(window?.location, "location"); 
     const full = location.protocol + "//" + location.host;
 
     console.log(full, "full");
