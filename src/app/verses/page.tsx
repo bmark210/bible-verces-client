@@ -8,16 +8,11 @@ async function Verses() {
 
   return (
     <>
-      <div className="night-sky">
-        <div className="shooting-stars"></div>
-
-        <div className="main-container">
-          <div className="carts-container">
-            {verses.map((verse, indexB) => (
-              <Cart key={indexB} {...verse} />
-            ))}
-          </div>
-        </div>
+      <div className="carts-container">
+        {verses.map((verse, indexB) => (
+          <Cart key={indexB} {...verse} />
+        ))}
+        {/* </div> */}
       </div>
     </>
   );

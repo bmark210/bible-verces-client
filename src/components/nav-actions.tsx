@@ -53,17 +53,23 @@ const data: NavItem[][] = [
       route: '/new-verse'
     },
     {
-      label: "Verses",
-      icon: FileText,
+      label: "Create new context",
+      icon: PenLine,
       type: 'nav',
-      route: '/verses'
+      route: '/new-verse'
     },
-    {
-      label: "Contexts",
-      icon: LinkIcon,
-      type: 'nav',
-      route: '/contexts'
-    },
+    // {
+    //   label: "Verses",
+    //   icon: FileText,
+    //   type: 'nav',
+    //   route: '/verses'
+    // },
+    // {
+    //   label: "Contexts",
+    //   icon: LinkIcon,
+    //   type: 'nav',
+    //   route: '/contexts'
+    // },
   ],
   // [
   //   {
@@ -118,7 +124,7 @@ export function NavActions() {
 
   return (
     <div className="flex items-center gap-2 text-sm">
-      <Button variant="ghost" size="icon" className="h-7 w-7 bg-accent/70">
+      <Button variant="ghost" size="icon" className="h-7 w-7 bg-accent">
         <Star />
       </Button>
       <Popover open={isOpen} onOpenChange={setIsOpen}>
@@ -126,7 +132,7 @@ export function NavActions() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-7 w-7 data-[state=open]:bg-accent bg-accent/70">
+            className="h-7 w-7 data-[state=open]:bg-accent bg-accent">
             <MoreHorizontal />
           </Button>
         </PopoverTrigger>

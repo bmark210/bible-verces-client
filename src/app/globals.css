@@ -55,8 +55,11 @@ body {
 
 .night-sky {
   display: block;
-  /* position: fixed; */
-  /* overflow: auto; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
 }

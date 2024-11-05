@@ -35,7 +35,7 @@ const CreateVerseForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-4 main-container py-36"
+      className="space-y-4 py-36"
     >
       <div className="flex flex-col">
         <label className="text-white" htmlFor="author">

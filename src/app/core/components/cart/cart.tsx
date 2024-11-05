@@ -55,7 +55,7 @@ const Cart = ({ id, verse, author, text, chapter }: Verse) => {
             >
               {text}
             </p>
-            <h5 className="mt-2 text-4xl tracking-tight text-white">
+            <h5 className="mt-2 text-2xl tracking-tight text-white">
               {author} {chapter}:{verse}
             </h5>
           </div>

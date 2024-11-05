@@ -7,8 +7,6 @@ const baseUrl =
     ? `${window?.location?.protocol}//${window?.location?.host}`
     : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-console.log('typeof window !== "undefined"', typeof window !== "undefined");
-console.log('process.env.NEXT_PUBLIC_BASE_URL', process.env.NEXT_PUBLIC_BASE_URL);
 
 
 export async function getVerses(): Promise<Verse[]> {

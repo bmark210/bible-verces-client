@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./core/layouts/header";
 
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,14 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <header className="sticky top-0 block p-5 main-container">
-  
-            <Header />
-          {/* </SidebarProvider> */}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased night-sky  pt-3`}>
+        <header className="sticky top-3 main-container bg-transparent z-10 backdrop-filter backdrop-blur-md">
+          <Header />
         </header>
-        {children}
+        <div className="">
+          <div className="shooting-stars"></div>
+          <main className="main-container">{children}</main>
+        </div>
       </body>
     </html>
   );
