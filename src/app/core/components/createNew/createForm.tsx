@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import React, { useEffect } from "react";
+import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { createVerse } from "../../services";
 import { VerseBody } from "../../interfaces";
@@ -20,14 +20,6 @@ const CreateVerseForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<VerseFormInputs>();
-
-  useEffect(() => {
-    console.log(window?.location.href, "location.href");
-    console.log(window?.location, "location"); 
-    const full = location.protocol + "//" + location.host;
-
-    console.log(full, "full");
-  });
 
   const onSubmit: SubmitHandler<VerseFormInputs> = async (data) => {
     const verse: VerseBody = {
