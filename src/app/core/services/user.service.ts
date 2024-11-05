@@ -1,9 +1,6 @@
 import axios from "axios";
 
-const baseUrl =
-  process.env.NODE_ENV === "production"
-    ? process.env.PRODUCTION_API_URL
-    : "http://localhost:3000";
+const baseUrl = location.protocol + "//" + location.host;
 
 export async function getUsers() {
   const response = await axios.get(`${baseUrl}/api/users`);
