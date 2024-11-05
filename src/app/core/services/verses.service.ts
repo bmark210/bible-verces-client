@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Verse } from "@prisma/client";
+import { VerseBody } from "../interfaces";
 
 const baseUrl =
   process.env.NODE_ENV === "production"
@@ -13,5 +14,15 @@ export async function getVerses(): Promise<Verse[]> {
   } catch (error) {
     console.error("Error fetching verses:", error);
     return [];
+  }
+}
+
+export async function createVerse(verse: VerseBody) {
+  try {
+    const response = await axios.post(`${baseUrl}/api/verses`, verse);
+    return response.data;
+  } catch (error) {
+    console.error("Error creating verse:", error);
+    return null;
   }
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./core/layouts/header";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,23 +20,20 @@ export const metadata: Metadata = {
   description: "Simple app for verses",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header className="relative block p-5">
-          <div className="block p-5">
-            <div className="w-full block px-2 py-3 border border-white rounded-lg border-solid">
-              <button className="text-white text-2xl">Create new</button>
-            </div>
-          </div>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <header className="sticky top-0 block p-5 main-container">
+  
+            <Header />
+          {/* </SidebarProvider> */}
         </header>
         {children}
       </body>
