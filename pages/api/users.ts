@@ -7,13 +7,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(200).json(users);
   }
 
-  if (req.method === "POST") {
-    const { name, email } = req.body;
-    const user = await prisma.user.create({
-      data: { name, email },
-    });
-    return res.status(201).json(user);
-  }
+  // if (req.method === "POST") {
+  //   const { name, email } = req.body;
+  //   const user = await prisma.user.create({
+  //     data: { name, email },
+  //   });
+  //   return res.status(201).json(user);
+  // }
 
   return res.status(405).end();
 };
