@@ -2,11 +2,9 @@ import axios from "axios";
 
 const baseUrl =
   typeof window !== "undefined"
-    ? `${window?.location?.protocol}//${window.location.host}`
+    ? `${window?.location?.protocol}//${window?.location?.host}`
     : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-console.log('typeof window !== "undefined"', typeof window !== "undefined");
-    
 export async function getUsers() {
   const response = await axios.get(`${baseUrl}/api/users`);
   return response.data;
