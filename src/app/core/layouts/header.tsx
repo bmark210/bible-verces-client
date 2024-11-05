@@ -8,7 +8,7 @@ import { FileText, LinkIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="block p-3 bg-transparent border-2 border-solid border-white rounded-lg">
+    <div className="block p-3 bg-transparent border-2 border-solid border-white rounded-lg backdrop-filter backdrop-blur-md">
       <SidebarProvider className="w-full justify-between">
         <div className="w-full flex gap-3">
           <Link href="/verses">

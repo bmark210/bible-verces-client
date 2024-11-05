@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased night-sky  pt-3`}>
-        <header className="sticky top-3 main-container bg-transparent z-10 backdrop-filter backdrop-blur-md">
+        <header className="sticky top-3 main-container bg-transparent z-10">
           <Header />
         </header>
         <div className="">
