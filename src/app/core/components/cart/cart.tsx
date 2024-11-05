@@ -5,7 +5,7 @@ import { Verse } from "@prisma/client";
 const Cart = ({ id, verse, author, text, chapter }: Verse) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
-
+  
   function adjustFontSize() {
     const container = containerRef.current;
     const text = textRef.current;

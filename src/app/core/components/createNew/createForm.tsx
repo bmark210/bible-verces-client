@@ -21,6 +21,13 @@ const CreateVerseForm = () => {
     formState: { errors },
   } = useForm<VerseFormInputs>();
 
+
+  console.log(window.location.href, 'location.href');
+  console.log(window.location, 'location');
+  const full = location.protocol + '//' + location.host;
+  
+console.log(full, 'full');
+
   const onSubmit: SubmitHandler<VerseFormInputs> = async (data) => {
     const verse: VerseBody = {
       author: data.author,
