@@ -2,8 +2,10 @@ import axios from "axios";
 import { Verse } from "@prisma/client";
 import { VerseBody } from "../interfaces";
 
-
-const baseUrl = location.protocol + "//" + location.host;
+const baseUrl =
+  typeof window !== "undefined"
+    ? `${window.location.protocol}//${window.location.host}`
+    : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 export async function getVerses(): Promise<Verse[]> {
   try {
