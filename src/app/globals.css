@@ -56,30 +56,10 @@ body {
   bottom: 0;
   right: 0;
   background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
-  -webkit-animation: animShootingStar 10s linear infinite;
+  /* -webkit-animation: animShootingStar 10s linear infinite; */
   animation: animShootingStar 10s linear infinite;
 }
 
-/* @keyframes animStar {
-  from {
-    transform: translateY(0px);
-  }
-
-  to {
-    transform: translateY(-2560px) translateX(-5560px);
-  }
-}
-
-@-webkit-keyframes animStar {
-
-  from {
-    transform: translateY(0px);
-  }
-
-  to {
-    transform: translateY(-2560px) translateX(-5560px);
-  }
-} */
 
 @keyframes animShootingStar {
   from {
