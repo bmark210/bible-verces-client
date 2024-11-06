@@ -27,11 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased night-sky  pt-3`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-3 `}
+      >
         <header className="sticky top-3 main-container bg-transparent z-10">
           <Header />
         </header>
-        <div className="">
+        <div className="night-sky relative">
           <div className="shooting-stars"></div>
           <main className="main-container">{children}</main>
         </div>
