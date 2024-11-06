@@ -39,24 +39,26 @@ import Link from "next/link";
 
 type NavItem = {
   label: string;
-  icon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
+  icon: React.ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
+  >;
   type?: string;
   route?: string;
-}
+};
 
 const data: NavItem[][] = [
   [
     {
       label: "Create new verse",
       icon: PenLine,
-      type: 'nav',
-      route: '/new-verse'
+      type: "nav",
+      route: "/new-verse",
     },
     {
       label: "Create new context",
       icon: PenLine,
-      type: 'nav',
-      route: '/new-verse'
+      type: "nav",
+      route: "/new-context",
     },
     // {
     //   label: "Verses",
@@ -132,13 +134,15 @@ export function NavActions() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-7 w-7 data-[state=open]:bg-accent bg-accent">
+            className="h-7 w-7 data-[state=open]:bg-accent bg-accent"
+          >
             <MoreHorizontal />
           </Button>
         </PopoverTrigger>
         <PopoverContent
           className="w-56 overflow-hidden rounded-lg p-0"
-          align="end">
+          align="end"
+        >
           <Sidebar collapsible="none" className="bg-transparent">
             <SidebarContent>
               {data.map((group, index) => (
@@ -147,17 +151,17 @@ export function NavActions() {
                     <SidebarMenu>
                       {group.map((item, index) => (
                         <SidebarMenuItem key={index}>
-                          {
-                            item.route ? 
+                          {item.route ? (
                             <Link href={item.route}>
                               <SidebarMenuButton>
                                 <item.icon /> <span>{item.label}</span>
                               </SidebarMenuButton>
-                            </Link> : 
+                            </Link>
+                          ) : (
                             <SidebarMenuButton>
                               <item.icon /> <span>{item.label}</span>
                             </SidebarMenuButton>
-                          }
+                          )}
                         </SidebarMenuItem>
                       ))}
                     </SidebarMenu>

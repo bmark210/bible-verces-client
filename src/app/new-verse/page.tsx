@@ -1,4 +1,4 @@
-import CreateVerseForm from "../core/components/createNew/createForm";
+import CreateVerseForm from "../core/components/createNewVerse/createNewVerse";
 
 const NewVerse = () => {
   return <CreateVerseForm />;
