@@ -3,7 +3,7 @@ import axiosInstance from "../axios";
 
 export async function getContexts() {
   try {
-    const response = await axiosInstance.get(`/api/contexts`);
+    const response = await axiosInstance.get("/api/contexts");
     return response.data;
   } catch (error) {
     console.error("Error fetching contexts:", error);
@@ -12,5 +12,5 @@ export async function getContexts() {
 }
 
 export async function createContext(contextBody: ContextBody) {
-  return await axiosInstance.post(`/api/contexts`, contextBody);
+  return await axiosInstance.post("/api/contexts", contextBody);
 }
