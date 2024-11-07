@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./core/layouts/header";
+import Header from "@/components/header";
+import { AppSidebar } from "@/components/app-sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AlertDialog } from "@/components/ui/alert-dialog";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,15 +30,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-3 `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="sticky top-3 main-container bg-transparent z-10">
-          <Header />
-        </header>
-        <div className="night-sky relative">
-          <div className="shooting-stars"></div>
-          <main className="main-container">{children}</main>
-        </div>
+        <SidebarProvider>
+          <header className="sticky top-3 main-container bg-transparent z-10">
+            <Header />
+          </header>
+          <div className="night-sky relative flex min-h-screen">
+            <div className="shooting-stars"></div>
+            <div className="flex main-container">
+              <main className="mt-32">{children}</main>
+              <aside className="block flex-1 ml-4">
+                <AppSidebar className="bg-white/10 text-white rounded-md backdrop-filter backdrop-blur-md" />
+              </aside>
+            </div>
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );

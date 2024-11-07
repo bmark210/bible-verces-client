@@ -14,6 +14,14 @@ model Verse {
   chapter String
   verse   String
   text    String
+  tags    Tag[] @relation("VerseTags")
+}
+
+model Tag {
+  id  String @id @default(cuid())
+  title String
+  color String
+  verses Verse[] @relation("VerseTags")
 }
 
 model Context {
