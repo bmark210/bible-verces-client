@@ -1,12 +1,11 @@
 "use client";
 
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FileText, LinkIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { NavActions } from "./nav-actions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 enum route {
   verses = "/verses",
