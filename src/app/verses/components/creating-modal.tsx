@@ -14,7 +14,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 import { VerseBody } from "@/app/core/interfaces";
 import { createVerse } from "@/app/core/services";
-import { Plus } from "lucide-react";
 
 type VerseFormInputs = {
   author: string;
