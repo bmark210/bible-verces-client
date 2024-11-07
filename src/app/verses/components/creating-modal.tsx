@@ -57,7 +57,7 @@ const CreatingModal = () => {
         <DialogHeader>
           <DialogTitle>Добавить стих</DialogTitle>
           <DialogDescription>
-            Заполните поля и нажмите "Добавить стих"
+            Заполните поля и нажмите {"Добавить стих"}
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 py-16">
